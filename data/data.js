@@ -17,14 +17,14 @@ const mockProjects = [
   {
     id: 1,
     title: 'Kalmarsund Pride',
-    img: process.env.S3_BUCKET + '/assets/kalmarsundspride/Mockup.jpg',
+    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/kalmarsundspride/Mockup.jpg',
     desktopImages: [
-      process.env.S3_BUCKET + '/assets/kalmarsundspride/Mockup.jpg',
-      process.env.S3_BUCKET + '/assets/kalmarsundspride/Mockup2.jpg',
-      process.env.S3_BUCKET + '/assets/kalmarsundspride/Mockup3.jpg',
-      process.env.S3_BUCKET + '/assets/kalmarsundspride/Mockup4.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/kalmarsundspride/Mockup.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/kalmarsundspride/Mockup2.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/kalmarsundspride/Mockup3.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/kalmarsundspride/Mockup4.jpg',
     ],
-    logo: process.env.S3_BUCKET + '/assets/kalmarsundspride/Ksplogotyp.svg',
+    logo: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/kalmarsundspride/Ksplogotyp.svg',
     services: ['UX', 'Visuell Design', 'Webb', 'Strategi'],
     skillsIcons: [
       ['Wordpress', FaWordpress],
@@ -37,14 +37,14 @@ const mockProjects = [
   {
     id: 2,
     title: 'Norrvulk',
-    img: process.env.S3_BUCKET + '/assets/norrvulk/Norrvulk-mock.jpg',
+    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/norrvulk/Norrvulk-mock.jpg',
     desktopImages: [
-      process.env.S3_BUCKET + '/assets/norrvulk/Mockup1.jpg',
-      process.env.S3_BUCKET + '/assets/norrvulk/Mockup2.jpg',
-      process.env.S3_BUCKET + '/assets/norrvulk/Mockup3.jpg',
-      process.env.S3_BUCKET + '/assets/norrvulk/Mockup4.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/norrvulk/Mockup1.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/norrvulk/Mockup2.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/norrvulk/Mockup3.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/norrvulk/Mockup4.jpg',
     ],
-    logo: process.env.S3_BUCKET + '/assets/norrvulk/Norrvulklogotyp.svg',
+    logo: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/norrvulk/Norrvulklogotyp.svg',
     services: ['Visuell Design', 'Webb'],
     skillsIcons: [
       ['Wordpress', FaWordpress],
@@ -57,14 +57,14 @@ const mockProjects = [
   {
     id: 3,
     title: 'Autenticityleads',
-    img: process.env.S3_BUCKET + '/assets/authenticity/Mockup1.jpg',
+    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/authenticity/Mockup1.jpg',
     desktopImages: [
-      process.env.S3_BUCKET + '/assets/authenticity/Mockup1.jpg',
-      process.env.S3_BUCKET + '/assets/authenticity/Mockup2.jpg',
-      process.env.S3_BUCKET + '/assets/authenticity/Mockup3.jpg',
-      process.env.S3_BUCKET + '/assets/authenticity/Mockup4.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/authenticity/Mockup1.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/authenticity/Mockup2.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/authenticity/Mockup3.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/authenticity/Mockup4.jpg',
     ],
-    logo: process.env.S3_BUCKET + '/assets/authenticity/Authenticitylogotyp.png',
+    logo: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/authenticity/Authenticitylogotyp.png',
     services: ['Visuell Design', 'UX', 'Webb'],
     skillsIcons: [
       ['User Interface', FaPalette],
@@ -80,14 +80,14 @@ const mockProjects = [
   {
     id: 4,
     title: 'Boka Eventstudio',
-    img: process.env.S3_BUCKET + '/assets/eventstudio/Mockup1.jpg',
+    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/eventstudio/Mockup1.jpg',
     desktopImages: [
-      process.env.S3_BUCKET + '/assets/eventstudio/Mockup1.jpg',
-      process.env.S3_BUCKET + '/assets/eventstudio/Mockup2.jpg',
-      process.env.S3_BUCKET + '/assets/eventstudio/Mockup3.jpg',
-      process.env.S3_BUCKET + '/assets/eventstudio/Mockup4.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/eventstudio/Mockup1.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/eventstudio/Mockup2.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/eventstudio/Mockup3.jpg',
+      'https://tierset.s3.eu-north-1.amazonaws.com/assets/eventstudio/Mockup4.jpg',
     ],
-    logo: process.env.S3_BUCKET + '/assets/eventstudio/logoEvent.svg',
+    logo: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/eventstudio/logoEvent.svg',
     services: ['UX', 'Visuell Design', 'Webb', 'Strategi'],
     skillsIcons: [
       ['User Interface', FaPalette],

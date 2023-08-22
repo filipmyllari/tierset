@@ -10,27 +10,27 @@ import { FaCode, FaPaintBrush, FaProjectDiagram, FaBrain } from 'react-icons/fa'
 const teamMembers = [
   {
     name: 'Filip',
-    img: process.env.S3_BUCKET + '/assets/filip.jpg',
+    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/filip.jpg',
     role: 'Fullstack utvecklare',
   },
   {
     name: 'David',
-    img: process.env.S3_BUCKET + '/assets/david.jpg',
+    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/david.jpg',
     role: 'Fullstack utvecklare',
   },
   {
     name: 'Carl',
-    img: process.env.S3_BUCKET + '/assets/carl.jpg',
+    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/carl.jpg',
     role: 'Visuell Designer',
   },
   {
     name: 'Pontus',
-    img: process.env.S3_BUCKET + '/assets/pontus.jpg',
+    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/pontus.jpg',
     role: 'UX Designer',
   },
   {
     name: 'Emil',
-    img: process.env.S3_BUCKET + '/assets/emil.jpg',
+    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/emil.jpg',
     role: 'Projektledare',
   },
 ]
