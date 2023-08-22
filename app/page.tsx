@@ -25,11 +25,11 @@ const HomeComponent = () => {
           skapar unika webbplatser oavsett bransch, storlek och produkt.
         </p>
       </div>
-      <Link href="/kontakt">
-        <button className="bg-[#1b2f5a] border-2 border-[#f81570] hover:bg-[#14213d] text-white py-2 px-6 md:px-8 rounded-full font-semibold transition duration-300 w-[10rem] md:w-auto inline-block">
-          Kontakta oss
-        </button>
-      </Link>
+        <Link href="/kontakt" className='z-[99]'>
+          <button className="bg-[#1b2f5a] border-2 border-[#f81570] hover:bg-[#14213d] text-white py-2 px-6 md:px-8 rounded-full font-semibold w-[10rem] md:w-auto inline-block">
+            Kontakta oss
+          </button>
+        </Link>
     </div>
   )
 }
