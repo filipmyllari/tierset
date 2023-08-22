@@ -103,6 +103,7 @@ const ProjectShowcase = () => {
                     }`}
                     style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}
                   >
+                    {/* @ts-ignore */}
                     <span className="text-white">{name}</span>
                   </div>
                 </motion.div>
