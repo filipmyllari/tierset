@@ -9,6 +9,8 @@ const HomeComponent = () => {
   return (
     <div className="flex-1 flex flex-col justify-center items-center">
       <Image
+        width={500}
+        height={500}
         src={LogoLight}
         alt="Your Company Logo"
         className="mb-4 md:mb-8 w-1/2 md:w-1/4"

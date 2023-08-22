@@ -1,15 +1,5 @@
-import logoKS from '@/public/assets/kalmarsundspride/Ksplogotyp.svg'
-import ksImg1 from '@/public/assets/kalmarsundspride/Mockup.jpg'
-import mockNorr from '@/public/assets/norrvulk/Norrvulk-mock.jpg'
-import logoNV from '@/public/assets/norrvulk/Norrvulklogotyp.svg'
-import mockAuth from '@/public/assets/authenticity/Mockup1.jpg'
-import logoAuth from '@/public/assets/authenticity/Authenticitylogotyp.png'
-import logoEvent from '@/public/assets/eventstudio/logoEvent.svg'
-import event from '@/public/assets/eventstudio/Mockup1.jpg'
 import {
-  FaReact,
   FaNodeJs,
-  FaDocker,
   FaVuejs,
   FaWordpress,
   FaPalette,
@@ -18,28 +8,23 @@ import {
 import {
   SiNextdotjs,
   SiTypescript,
-  SiJavascript,
-  SiGraphql,
   SiAmazonaws,
   SiTailwindcss,
   SiPostgresql,
-  SiMysql,
-  SiKubernetes,
-  SiFirebase,
 } from 'react-icons/si'
 
 const mockProjects = [
   {
     id: 1,
     title: 'Kalmarsund Pride',
-    img: ksImg1,
+    img: process.env.S3_BUCKET + '/assets/kalmarsundspride/Mockup.jpg',
     desktopImages: [
-      '/assets/kalmarsundspride/Mockup.jpg',
-      '/assets/kalmarsundspride/Mockup2.jpg',
-      '/assets/kalmarsundspride/Mockup3.jpg',
-      '/assets/kalmarsundspride/Mockup4.jpg',
+      process.env.S3_BUCKET + '/assets/kalmarsundspride/Mockup.jpg',
+      process.env.S3_BUCKET + '/assets/kalmarsundspride/Mockup2.jpg',
+      process.env.S3_BUCKET + '/assets/kalmarsundspride/Mockup3.jpg',
+      process.env.S3_BUCKET + '/assets/kalmarsundspride/Mockup4.jpg',
     ],
-    logo: logoKS,
+    logo: process.env.S3_BUCKET + '/assets/kalmarsundspride/Ksplogotyp.svg',
     services: ['UX', 'Visuell Design', 'Webb', 'Strategi'],
     skillsIcons: [
       ['Wordpress', FaWordpress],
@@ -52,14 +37,14 @@ const mockProjects = [
   {
     id: 2,
     title: 'Norrvulk',
-    img: mockNorr,
+    img: process.env.S3_BUCKET + '/assets/norrvulk/Norrvulk-mock.jpg',
     desktopImages: [
-      '/assets/norrvulk/Mockup1.jpg',
-      '/assets/norrvulk/Mockup2.jpg',
-      '/assets/norrvulk/Mockup3.jpg',
-      '/assets/norrvulk/Mockup4.jpg',
+      process.env.S3_BUCKET + '/assets/norrvulk/Mockup1.jpg',
+      process.env.S3_BUCKET + '/assets/norrvulk/Mockup2.jpg',
+      process.env.S3_BUCKET + '/assets/norrvulk/Mockup3.jpg',
+      process.env.S3_BUCKET + '/assets/norrvulk/Mockup4.jpg',
     ],
-    logo: logoNV,
+    logo: process.env.S3_BUCKET + '/assets/norrvulk/Norrvulklogotyp.svg',
     services: ['Visuell Design', 'Webb'],
     skillsIcons: [
       ['Wordpress', FaWordpress],
@@ -72,14 +57,14 @@ const mockProjects = [
   {
     id: 3,
     title: 'Autenticityleads',
-    img: mockAuth,
+    img: process.env.S3_BUCKET + '/assets/authenticity/Mockup1.jpg',
     desktopImages: [
-      '/assets/authenticity/Mockup1.jpg',
-      '/assets/authenticity/Mockup2.jpg',
-      '/assets/authenticity/Mockup3.jpg',
-      '/assets/authenticity/Mockup4.jpg',
+      process.env.S3_BUCKET + '/assets/authenticity/Mockup1.jpg',
+      process.env.S3_BUCKET + '/assets/authenticity/Mockup2.jpg',
+      process.env.S3_BUCKET + '/assets/authenticity/Mockup3.jpg',
+      process.env.S3_BUCKET + '/assets/authenticity/Mockup4.jpg',
     ],
-    logo: logoAuth,
+    logo: process.env.S3_BUCKET + '/assets/authenticity/Authenticitylogotyp.png',
     services: ['Visuell Design', 'UX', 'Webb'],
     skillsIcons: [
       ['User Interface', FaPalette],
@@ -95,14 +80,14 @@ const mockProjects = [
   {
     id: 4,
     title: 'Boka Eventstudio',
-    img: event,
+    img: process.env.S3_BUCKET + '/assets/eventstudio/Mockup1.jpg',
     desktopImages: [
-      '/assets/eventstudio/Mockup1.jpg',
-      '/assets/eventstudio/Mockup2.jpg',
-      '/assets/eventstudio/Mockup3.jpg',
-      '/assets/eventstudio/Mockup4.jpg',
+      process.env.S3_BUCKET + '/assets/eventstudio/Mockup1.jpg',
+      process.env.S3_BUCKET + '/assets/eventstudio/Mockup2.jpg',
+      process.env.S3_BUCKET + '/assets/eventstudio/Mockup3.jpg',
+      process.env.S3_BUCKET + '/assets/eventstudio/Mockup4.jpg',
     ],
-    logo: logoEvent,
+    logo: process.env.S3_BUCKET + '/assets/eventstudio/logoEvent.svg',
     services: ['UX', 'Visuell Design', 'Webb', 'Strategi'],
     skillsIcons: [
       ['User Interface', FaPalette],

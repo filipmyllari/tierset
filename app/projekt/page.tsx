@@ -43,6 +43,8 @@ const ProjectsComponent = () => (
               <Image
                 src={img}
                 alt={title}
+                width={500}
+                height={500}
                 className="w-full absolute top-50% transform -translate-y-50% object-cover"
               />
             </div>

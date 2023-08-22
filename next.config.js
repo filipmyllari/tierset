@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+module.exports = {
+    images: {
+      domains: ['tierset.s3.eu-north-1.amazonaws.com'],
+    },
+}

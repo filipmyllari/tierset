@@ -50,6 +50,8 @@ const ProjectShowcase = () => {
             <Image
               src={project.logo}
               alt={project.title}
+              width={500}
+              height={500}
               className={`w-20 h-20 md:w-80 md:h-22 p-2 ${
                 project.isLogoDark ? 'bg-white rounded-[12px]' : ''
               }`}
