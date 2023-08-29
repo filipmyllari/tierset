@@ -112,7 +112,7 @@ const getRoleIcon = (role) => {
 const ContactComponent = () => {
   return (
     <div className="flex-1 overflow-y-auto flex flex-col justify-center items-center p-4 md:p-8">
-      <div className="container mx-auto max-w-5xl space-y-12 md:z-10">
+      <div className="container mx-auto max-w-5xl space-y-12 md:z-10 z-10">
         <section className="flex flex-col-reverse md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
           <div className="md:w-1/2">
             <h1 className="text-2xl md:text-3xl font-light text-white mb-4">

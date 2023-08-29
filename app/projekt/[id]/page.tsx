@@ -44,7 +44,7 @@ const ProjectShowcase = () => {
 
   return (
     <div className="flex-1 overflow-y-auto flex flex-col justify-center items-center p-4 md:p-8">
-      <div className="container mx-auto max-w-5xl space-y-12 md:z-10">
+      <div className="container mx-auto max-w-5xl space-y-12 md:z-10 z-10">
         <section className="space-y-4 md:space-y-0 md:flex md:items-center md:justify-between">
           <div className="mb-6 md:mb-0 md:order-2 w-full md:w-auto flex justify-center">
             <Image

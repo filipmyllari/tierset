@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const HomeComponent = () => {
   return (
-    <div className="flex-1 flex flex-col justify-center items-center">
+    <div className="flex-1 flex flex-col justify-center items-center z-10">
       <Image
         width={500}
         height={500}
