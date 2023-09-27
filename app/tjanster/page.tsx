@@ -94,6 +94,7 @@ const ServiceItem: React.FC<ServiceProps> = ({
       transition={{ duration: 0.4 }}
     >
       <div className="flex justify-center items-center bg-[#244584] p-4 rundad-full mb-4">
+        {/* @ts-ignore */}
         <Icon size={48} color="#FFFFFF" />
       </div>
       <h2 className="text-2xl font-semibold border-b-2 border-[#f81570] pb-2">
@@ -103,6 +104,7 @@ const ServiceItem: React.FC<ServiceProps> = ({
       <ul className="space-y-2">
         {subDescriptions.map((sub, idx) => (
           <li key={idx} className="flex items-center space-x-2">
+            {/* @ts-ignore */}
             <sub.icon className="text-white" />
             <span>{sub.desc}</span>
           </li>
