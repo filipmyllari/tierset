@@ -45,7 +45,7 @@ const ProjectShowcase = () => {
     })) || []
 
   return (
-    <div className="flex-1 overflow-y-auto flex flex-col justify-center items-center p-4 md:p-8">
+    <div className="flex-1 overflow-y-auto flex flex-col justify-center items-center md:mt-16 p-4 md:p-8">
       <div className="container mx-auto max-w-5xl space-y-12 md:z-10 z-10">
         <section className="space-y-4 md:space-y-0 md:flex md:items-center md:justify-between">
           {/* Arrow button alongside the logo */}

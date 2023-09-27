@@ -2,13 +2,14 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { FaHome, FaUsers } from 'react-icons/fa'
+import { FaHome, FaUsers, FaBox } from 'react-icons/fa'
 import { AiFillMail } from 'react-icons/ai'
 import { SiSitepoint } from 'react-icons/si'
 
 const links = [
   { to: '/', icon: FaHome },
   { to: '/om-oss', icon: FaUsers },
+  { to: '/tjanster', icon: FaBox},
   { to: '/projekt', icon: SiSitepoint },
   { to: '/kontakt', icon: AiFillMail },
 ]
