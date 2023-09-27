@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+import { FaArrowLeft } from 'react-icons/fa'
+import { usePathname, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import mockProjects from '@/data/data.js'
 import MotionHoc from '@/components/animations/MotionHoc'
@@ -24,6 +25,7 @@ const itemVariants = {
 }
 
 const ProjectShowcase = () => {
+  const router = useRouter()
   const pathname = usePathname()
   const segments = pathname.split('/')
   const id = segments[segments.length - 1]
@@ -46,13 +48,21 @@ const ProjectShowcase = () => {
     <div className="flex-1 overflow-y-auto flex flex-col justify-center items-center p-4 md:p-8">
       <div className="container mx-auto max-w-5xl space-y-12 md:z-10 z-10">
         <section className="space-y-4 md:space-y-0 md:flex md:items-center md:justify-between">
-          <div className="mb-6 md:mb-0 md:order-2 w-full md:w-auto flex justify-center">
+          {/* Arrow button alongside the logo */}
+          <div className="mb-6 md:mb-0 md:order-2 w-full md:w-auto flex justify-between items-center">
+            <button
+              onClick={() => router.back()}
+              className="bg-transparent p-2 md:hidden"
+              aria-label="Go back"
+            >
+              <FaArrowLeft size={32} color="white" /> {/* Increased the size */}
+            </button>
             <Image
               src={project.logo}
               alt={project.title}
               width={500}
               height={500}
-              className={`w-20 h-20 md:w-80 md:h-22 p-2 ${
+              className={`w-22 h-20 md:w-80 md:h-22 p-2 ${
                 project.isLogoDark ? 'bg-white rounded-[12px]' : ''
               }`}
             />
