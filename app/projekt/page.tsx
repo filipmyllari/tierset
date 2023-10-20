@@ -1,25 +1,25 @@
-'use client'
+"use client";
 
-import React from 'react'
-import MotionHoc from '@/components/animations/MotionHoc'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
-import mockProjects from '@/data/data.js';
+import React from "react";
+import MotionHoc from "@/components/animations/MotionHoc";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import mockProjects from "@/data/data.js";
 
 const containerVariants = {
   hidden: { opacity: 1, scale: 0.8 },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { when: 'beforeChildren', staggerChildren: 0.1 },
+    transition: { when: "beforeChildren", staggerChildren: 0.1 },
   },
-}
+};
 
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: { y: 0, opacity: 1 },
-}
+};
 
 const ProjectsComponent = () => (
   <div className="flex-1 overflow-y-auto flex flex-col justify-center items-center p-4 md:p-8">
@@ -60,17 +60,17 @@ const ProjectsComponent = () => (
               ))}
             </div>
             <Link href={`/projekt/${id}`} passHref>
-                <button className="bg-[#1b2f5a] border-2 border-[#f81570] hover:bg-[#14213d] text-white py-2 px-6 md:px-8 rounded-full font-semibold transition duration-300 w-[10rem] md:w-auto">
-                    Läs mer
-                </button>
+              <button className="bg-[#1b2f5a] border-2 border-[#f81570] hover:bg-[#14213d] text-white py-2 px-6 md:px-8 rounded-full font-semibold transition duration-300 w-[10rem] md:w-auto">
+                Läs mer
+              </button>
             </Link>
           </motion.div>
         ))}
       </motion.div>
     </div>
   </div>
-)
+);
 
-const Projects = MotionHoc(ProjectsComponent)
+const Projects = MotionHoc(ProjectsComponent);
 
-export default Projects
+export default Projects;

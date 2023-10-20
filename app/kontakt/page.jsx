@@ -1,57 +1,62 @@
-'use client'
-import React, { memo } from 'react'
-import MotionHoc from '@/components/animations/MotionHoc'
-import { motion } from 'framer-motion'
-import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
-import Image from 'next/image'
-import logo from '@/public/assets/logo.svg'
-import { FaCode, FaPaintBrush, FaProjectDiagram, FaBrain } from 'react-icons/fa'
+"use client";
+import React, { memo } from "react";
+import MotionHoc from "@/components/animations/MotionHoc";
+import { motion } from "framer-motion";
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import Image from "next/image";
+import logo from "@/public/assets/logo.svg";
+import {
+  FaCode,
+  FaPaintBrush,
+  FaProjectDiagram,
+  FaBrain,
+} from "react-icons/fa";
 
 const teamMembers = [
   {
-    name: 'Filip',
-    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/filip.jpg',
-    role: 'Fullstack utvecklare',
+    name: "Filip",
+    img: "https://tierset.s3.eu-north-1.amazonaws.com/assets/filip.jpg",
+    role: "Fullstack utvecklare",
   },
   {
-    name: 'David',
-    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/david.jpg',
-    role: 'Fullstack utvecklare',
+    name: "David",
+    img: "https://tierset.s3.eu-north-1.amazonaws.com/assets/david.jpg",
+    role: "Fullstack utvecklare",
   },
   {
-    name: 'Carl',
-    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/carl.jpg',
-    role: 'Visuell Designer',
+    name: "Carl",
+    img: "https://tierset.s3.eu-north-1.amazonaws.com/assets/carl.jpg",
+    role: "Visuell Designer",
   },
   {
-    name: 'Pontus',
-    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/pontus.jpg',
-    role: 'UX Designer',
+    name: "Pontus",
+    img: "https://tierset.s3.eu-north-1.amazonaws.com/assets/pontus.jpg",
+    role: "UX Designer",
   },
   {
-    name: 'Emil',
-    img: 'https://tierset.s3.eu-north-1.amazonaws.com/assets/emil.jpg',
-    role: 'Projektledare',
+    name: "Emil",
+    img: "https://tierset.s3.eu-north-1.amazonaws.com/assets/emil.jpg",
+    role: "Projektledare",
   },
-]
+];
 
 const circleColors = [
-  'bg-[#f81570]',
-  'bg-[#ff2e90]',
-  'bg-purple-300',
-  'bg-purple-400',
-  'bg-yellow-200',
-  'bg-yellow-300',
-]
+  "bg-[#f81570]",
+  "bg-[#ff2e90]",
+  "bg-purple-300",
+  "bg-purple-400",
+  "bg-yellow-200",
+  "bg-yellow-300",
+];
 
 const Circle = memo(({ content, size, style, color, variants }) => {
-  const isImage = typeof content === 'object' && content.img
-  const isTeamInfo = content && content.big
+  const isImage = typeof content === "object" && content.img;
+  const isTeamInfo = content && content.big;
 
   return (
     <motion.div
       className={`rounded-full p-4 ${size} flex items-center justify-center relative ${
-        !isImage ? color : ''
+        !isImage ? color : ""
       }`}
       style={style}
       variants={variants}
@@ -73,10 +78,10 @@ const Circle = memo(({ content, size, style, color, variants }) => {
         content
       )}
     </motion.div>
-  )
-})
+  );
+});
 
-Circle.displayName = 'Circle'
+Circle.displayName = "Circle";
 
 const containerVariants = {
   hidden: { opacity: 1, scale: 0.8 },
@@ -84,31 +89,31 @@ const containerVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      when: 'beforeChildren',
+      when: "beforeChildren",
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 const teamMemberVariants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-}
+};
 
 const getRoleIcon = (role) => {
   switch (role) {
-    case 'Fullstack utvecklare':
-      return <FaCode className="text-white text-xl" /> // Increased icon size
-    case 'Visuell Designer':
-      return <FaPaintBrush className="text-white text-xl" /> // Increased icon size
-    case 'UX Designer':
-      return <FaBrain className="text-white text-xl" /> // Increased icon size
-    case 'Projektledare':
-      return <FaProjectDiagram className="text-white text-xl" /> // Increased icon size
+    case "Fullstack utvecklare":
+      return <FaCode className="text-white text-xl" />; // Increased icon size
+    case "Visuell Designer":
+      return <FaPaintBrush className="text-white text-xl" />; // Increased icon size
+    case "UX Designer":
+      return <FaBrain className="text-white text-xl" />; // Increased icon size
+    case "Projektledare":
+      return <FaProjectDiagram className="text-white text-xl" />; // Increased icon size
     default:
-      return null
+      return null;
   }
-}
+};
 const ContactComponent = () => {
   return (
     <div className="flex-1 overflow-y-auto flex flex-col justify-center items-center p-4 md:p-8">
@@ -180,7 +185,7 @@ const ContactComponent = () => {
                     alt={member.name}
                   />
                   <div className="rounded-full bg-[#14213d] p-2 absolute bottom-0 left-0 border-[1px] border-[#f81570]">
-                    {' '}
+                    {" "}
                     {/* Icon container */}
                     {getRoleIcon(member.role)} {/* Role-specific icon */}
                   </div>
@@ -195,9 +200,9 @@ const ContactComponent = () => {
         </section>
       </div>
     </div>
-  )
-}
+  );
+};
 
-const Contact = MotionHoc(ContactComponent)
+const Contact = MotionHoc(ContactComponent);
 
-export default Contact
+export default Contact;

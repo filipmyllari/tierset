@@ -1,48 +1,48 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react'
-import Image from 'next/image'
-import { FaArrowLeft } from 'react-icons/fa'
-import { usePathname, useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
-import mockProjects from '@/data/data.js'
-import MotionHoc from '@/components/animations/MotionHoc'
-import ImageGallery from 'react-image-gallery'
-import 'react-image-gallery/styles/css/image-gallery.css'
+import React, { useState } from "react";
+import Image from "next/image";
+import { FaArrowLeft } from "react-icons/fa";
+import { usePathname, useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import mockProjects from "@/data/data.js";
+import MotionHoc from "@/components/animations/MotionHoc";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 const containerVariants = {
   hidden: { opacity: 1, scale: 0.8 },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { when: 'beforeChildren', staggerChildren: 0.1 },
+    transition: { when: "beforeChildren", staggerChildren: 0.1 },
   },
-}
+};
 
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: { y: 0, opacity: 1 },
-}
+};
 
 const ProjectShowcase = () => {
-  const router = useRouter()
-  const pathname = usePathname()
-  const segments = pathname.split('/')
-  const id = segments[segments.length - 1]
+  const router = useRouter();
+  const pathname = usePathname();
+  const segments = pathname.split("/");
+  const id = segments[segments.length - 1];
 
-  const project = mockProjects.find((proj) => proj.id === parseInt(id))
+  const project = mockProjects.find((proj) => proj.id === parseInt(id));
 
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   if (!project) {
-    return <div>Project not found</div>
+    return <div>Project not found</div>;
   }
 
   const desktopImages =
     project.desktopImages?.map((imgSrc) => ({
       original: imgSrc,
       thumbnail: imgSrc,
-    })) || []
+    })) || [];
 
   return (
     <div className="flex-1 overflow-y-auto flex flex-col justify-center items-center md:mt-16 p-4 md:p-8">
@@ -63,7 +63,7 @@ const ProjectShowcase = () => {
               width={500}
               height={500}
               className={`w-22 h-20 md:w-80 md:h-22 p-2 ${
-                project.isLogoDark ? 'bg-white rounded-[12px]' : ''
+                project.isLogoDark ? "bg-white rounded-[12px]" : ""
               }`}
             />
           </div>
@@ -82,10 +82,10 @@ const ProjectShowcase = () => {
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.5 }}
           style={{
-            backgroundColor: '#f81570',
-            height: '2px',
-            width: '100%',
-            marginBottom: '16px',
+            backgroundColor: "#f81570",
+            height: "2px",
+            width: "100%",
+            marginBottom: "16px",
           }}
         />
 
@@ -111,9 +111,9 @@ const ProjectShowcase = () => {
                   <Icon className="w-10 h-10 md:w-14 md:h-14" />
                   <div
                     className={`absolute inset-0 flex items-center justify-center text-center rounded-full transition-opacity ${
-                      hoveredSkill === name ? 'opacity-100' : 'opacity-0'
+                      hoveredSkill === name ? "opacity-100" : "opacity-0"
                     }`}
-                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}
+                    style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
                   >
                     {/* @ts-ignore */}
                     <span className="text-white">{name}</span>
@@ -131,9 +131,9 @@ const ProjectShowcase = () => {
         </section>
       </div>
     </div>
-  )
-}
+  );
+};
 
-const MotionProjectShowcase = MotionHoc(ProjectShowcase)
+const MotionProjectShowcase = MotionHoc(ProjectShowcase);
 
-export default MotionProjectShowcase
+export default MotionProjectShowcase;

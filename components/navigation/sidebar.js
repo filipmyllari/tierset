@@ -1,25 +1,25 @@
-'use client'
+"use client";
 
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-import { FaHome, FaUsers, FaBox } from 'react-icons/fa'
-import { AiFillMail } from 'react-icons/ai'
-import { SiSitepoint } from 'react-icons/si'
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { FaHome, FaUsers, FaBox } from "react-icons/fa";
+import { AiFillMail } from "react-icons/ai";
+import { SiSitepoint } from "react-icons/si";
 
 const links = [
-  { to: '/', icon: FaHome },
-  { to: '/om-oss', icon: FaUsers },
-  { to: '/tjanster', icon: FaBox},
-  { to: '/projekt', icon: SiSitepoint },
-  { to: '/kontakt', icon: AiFillMail },
-]
+  { to: "/", icon: FaHome },
+  { to: "/om-oss", icon: FaUsers },
+  { to: "/tjanster", icon: FaBox },
+  { to: "/projekt", icon: SiSitepoint },
+  { to: "/kontakt", icon: AiFillMail },
+];
 
 const NavItem = ({ to, Icon }) => {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   // Check if the current path starts with the 'to' path
   let isActive;
-  if (to === '/') {
+  if (to === "/") {
     isActive = pathname === to;
   } else {
     isActive = pathname.startsWith(to);
@@ -29,7 +29,7 @@ const NavItem = ({ to, Icon }) => {
     <li className="flex-grow md:flex-grow-0 relative md:ml-2">
       <Link
         className={`flex items-center justify-center w-full py-4 text-white transition-all duration-300 relative ${
-          isActive ? 'line-active' : ''
+          isActive ? "line-active" : ""
         }`}
         href={to}
       >
@@ -39,14 +39,16 @@ const NavItem = ({ to, Icon }) => {
 
         {isActive && (
           <span
-            className={`w-3/5 h-1 bg-white absolute ${isActive ? 'md:right-0 md:top-[20%] top-0' : 'bottom-2 left-2/5'} transform -translate-x-2/5 line rounded md:w-1 md:h-3/5 md:bottom-1/5 md:right-0 md:transform-none`}
+            className={`w-3/5 h-1 bg-white absolute ${
+              isActive ? "md:right-0 md:top-[20%] top-0" : "bottom-2 left-2/5"
+            } transform -translate-x-2/5 line rounded md:w-1 md:h-3/5 md:bottom-1/5 md:right-0 md:transform-none`}
             aria-hidden={true}
           ></span>
         )}
       </Link>
     </li>
-  )
-}
+  );
+};
 
 const Sidebar = () => {
   return (
@@ -55,7 +57,7 @@ const Sidebar = () => {
         <NavItem key={index} to={link.to} Icon={link.icon} />
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

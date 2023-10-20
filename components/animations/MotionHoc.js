@@ -13,12 +13,18 @@ const MotionHoc = (
   }
 ) => {
   const WrappedComponent = (props) => (
-    <motion.div initial={customInitial} animate={customAnimate} exit={customExit}>
+    <motion.div
+      initial={customInitial}
+      animate={customAnimate}
+      exit={customExit}
+    >
       <Component {...props} />
     </motion.div>
   );
 
-  WrappedComponent.displayName = `MotionHoc(${Component.displayName || Component.name || "Component"})`;
+  WrappedComponent.displayName = `MotionHoc(${
+    Component.displayName || Component.name || "Component"
+  })`;
 
   return WrappedComponent;
 };

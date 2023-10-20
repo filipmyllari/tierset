@@ -1,23 +1,23 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import Sidebar from '@/components/navigation/sidebar'
+import "./globals.css";
+import type { Metadata } from "next";
+import Sidebar from "@/components/navigation/sidebar";
 
 export const metadata: Metadata = {
-  title: 'Tierset Studio',
-  description: 'Webbyrå i Stockholm',
-}
+  title: "Tierset Studio",
+  description: "Webbyrå i Stockholm",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className="relative h-full bg-primary min-h-screen overflow-visible">
         <div className="relative h-[80vh] md:h-screen bg-gradient">
           <svg
-            className="absolute w-full md:z-0 bottom-0 md:h-auto"
+            className="absolute w-full md:z-0 bottom-[-2px] md:h-auto"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 320"
           >
@@ -34,5 +34,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  )
+  );
 }

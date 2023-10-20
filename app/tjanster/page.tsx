@@ -1,5 +1,5 @@
-'use client'
-import React from 'react'
+"use client";
+import React from "react";
 import {
   FaCloud,
   FaPalette,
@@ -9,76 +9,77 @@ import {
   FaObjectGroup,
   FaUserCheck,
   FaChartLine,
-} from 'react-icons/fa'
-import { motion } from 'framer-motion'
+} from "react-icons/fa";
+import { motion } from "framer-motion";
+import MotionHoc from "@/components/animations/MotionHoc";
 
 const services = [
   {
-    title: 'Fullstack Utveckling',
+    title: "Fullstack Utveckling",
     description:
-      'Vi erbjuder helhetslösningar för webbutveckling, vilket garanterar en sömlös integration mellan frontend och backend-delarna av din applikation.',
+      "Vi erbjuder helhetslösningar för webbutveckling, vilket garanterar en sömlös integration mellan frontend och backend-delarna av din applikation.",
     subDescriptions: [
       {
-        title: 'Frontend Utveckling',
-        desc: 'Omvandla visioner till digital verklighet',
+        title: "Frontend Utveckling",
+        desc: "Omvandla visioner till digital verklighet",
         icon: FaDesktop,
       },
       {
-        title: 'Backend Utveckling',
-        desc: 'Digital transformation',
+        title: "Backend Utveckling",
+        desc: "Digital transformation",
         icon: FaServer,
       },
     ],
     icon: FaCode,
   },
   {
-    title: 'UI/UX Design',
+    title: "UI/UX Design",
     description:
-      'Användarupplevelse och gränssnittsdesign ligger i hjärtat av vad vi gör. Vi skapar visuellt slående gränssnitt med användarcentrerade design som fångar och engagerar din publik.',
+      "Användarupplevelse och gränssnittsdesign ligger i hjärtat av vad vi gör. Vi skapar visuellt slående gränssnitt med användarcentrerade design som fångar och engagerar din publik.",
     subDescriptions: [
       {
-        title: 'UX Design',
-        desc: 'Skapa digitala upplevelser',
+        title: "UX Design",
+        desc: "Skapa digitala upplevelser",
         icon: FaObjectGroup,
       },
       {
-        title: 'UI Design',
-        desc: 'Kombinerar skönhet med funktion för optimal användning',
+        title: "UI Design",
+        desc: "Kombinerar skönhet med funktion för optimal användning",
         icon: FaUserCheck,
       },
     ],
     icon: FaPalette,
   },
   {
-    title: 'Moln/Infrastruktur',
+    title: "Moln/Infrastruktur",
     description:
-      'Bygg starka digitala grunder för framgång. Våra plattforms- och infrastrukturtjänster lägger grunden för din digitala resa.',
+      "Bygg starka digitala grunder för framgång. Våra plattforms- och infrastrukturtjänster lägger grunden för din digitala resa.",
     subDescriptions: [
       {
-        title: 'Skalbar arkitektur',
-        desc: 'Bygg för framtida expansion',
+        title: "Skalbar arkitektur",
+        desc: "Bygg för framtida expansion",
         icon: FaChartLine,
       },
       {
-        title: 'Molnoptimering',
-        desc: 'Maximera prestanda och håll dig säker i molnet',
+        title: "Molnoptimering",
+        desc: "Maximera prestanda och håll dig säker i molnet",
         icon: FaCloud,
       },
     ],
     icon: FaCloud,
   },
-]
+];
 
 type ServiceProps = {
-  title: string
-  description: string
+  title: string;
+  description: string;
   subDescriptions: Array<{
-    title: string
-    desc: string
-    icon: React.ComponentType
-  }>
-  icon: React.ComponentType
-}
+    title: string;
+    desc: string;
+    icon: React.ComponentType;
+  }>;
+  icon: React.ComponentType;
+};
 
 const ServiceItem: React.FC<ServiceProps> = ({
   title,
@@ -111,17 +112,17 @@ const ServiceItem: React.FC<ServiceProps> = ({
         ))}
       </ul>
     </motion.div>
-  )
-}
+  );
+};
 
 const ServicesPage = () => {
   const containerVariants = {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
-      transition: { when: 'beforeChildren', staggerChildren: 0.1 },
+      transition: { when: "beforeChildren", staggerChildren: 0.1 },
     },
-  }
+  };
 
   return (
     <motion.div
@@ -133,13 +134,13 @@ const ServicesPage = () => {
       <h1 className="text-2xl md:text-3xl font-light text-white text-center mb-4">
         Våra Tjänster
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mt-4 z-10">
         {services.map((service, index) => (
           <ServiceItem key={index} {...service} />
         ))}
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default ServicesPage
+export default MotionHoc(ServicesPage);
