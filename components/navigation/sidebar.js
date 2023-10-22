@@ -17,7 +17,6 @@ const links = [
 const NavItem = ({ to, Icon }) => {
   const pathname = usePathname();
 
-  // Check if the current path starts with the 'to' path
   let isActive;
   if (to === "/") {
     isActive = pathname === to;
