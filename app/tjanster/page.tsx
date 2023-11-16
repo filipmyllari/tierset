@@ -131,7 +131,7 @@ const ServicesPage = () => {
       initial="hidden"
       animate="visible"
     >
-      <h1 className="text-2xl md:text-3xl font-light text-white text-center mb-4">
+      <h1 className="text-2xl md:text-3xl text-white text-center mb-4 font-bold">
         Våra Tjänster
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mt-4 z-10">

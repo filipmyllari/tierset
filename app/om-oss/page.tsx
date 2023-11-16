@@ -74,7 +74,7 @@ const TeamComponent = () => (
           />
         </div>
         <div className="md:order-1 w-full md:w-1/2">
-          <h1 className="text-2xl md:text-3xl font-light text-white mb-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Om oss
           </h1>
           <p className="text-base md:text-lg text-white leading-relaxed mt-4">

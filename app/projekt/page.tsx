@@ -24,7 +24,7 @@ const itemVariants = {
 const ProjectsComponent = () => (
   <div className="flex-1 overflow-y-auto flex flex-col justify-center items-center p-4 md:p-8">
     <div className="container mx-auto max-w-7xl space-y-12">
-      <h1 className="text-2xl md:text-3xl font-light text-white text-center">
+      <h1 className="text-2xl md:text-3xl ffont-bold text-white text-center">
         Tidigare projekt
       </h1>
       <motion.div

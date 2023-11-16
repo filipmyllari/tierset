@@ -120,7 +120,7 @@ const ContactComponent = () => {
       <div className="container mx-auto max-w-5xl space-y-12 md:z-10 z-10">
         <section className="flex flex-col-reverse md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
           <div className="md:w-1/2">
-            <h1 className="text-2xl md:text-3xl font-light text-white mb-4">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Kontakta oss
             </h1>
             <p className="text-base md:text-lg text-white leading-relaxed mt-4">
