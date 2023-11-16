@@ -105,7 +105,7 @@ const TeamComponent = () => (
       />
 
       <section className="space-y-12">
-        <h1 className="text-2xl md:text-3xl font-light text-white text-center">
+        <h1 className="text-2xl md:text-3xl font-normal text-white text-center">
           Vi kan bland annat
         </h1>
         <motion.div

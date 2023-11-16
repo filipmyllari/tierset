@@ -161,7 +161,7 @@ const ContactComponent = () => {
           className="h-0.5 bg-pink-600 w-full mb-4"
         />
         <section className="space-y-8 relative">
-          <h1 className="text-2xl md:text-3xl font-light text-white mb-4">
+          <h1 className="text-2xl md:text-3xl font-normal text-white mb-4">
             Vårt team
           </h1>
           <motion.div

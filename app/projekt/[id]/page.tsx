@@ -90,7 +90,7 @@ const ProjectShowcase = () => {
         />
 
         <section className="space-y-12">
-          <h1 className="text-2xl md:text-3xl font-light text-white text-center">
+          <h1 className="text-2xl md:text-3xl font-normal text-white text-center">
             Tjänster som användes
           </h1>
           <motion.div
@@ -124,7 +124,7 @@ const ProjectShowcase = () => {
         </section>
 
         <section className="space-y-12">
-          <h1 className="text-2xl md:text-3xl font-light text-white text-center">
+          <h1 className="text-2xl md:text-3xl font-normal text-white text-center">
             Galleri
           </h1>
           <ImageGallery items={desktopImages} />
