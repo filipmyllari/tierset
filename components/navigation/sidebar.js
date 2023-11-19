@@ -51,7 +51,7 @@ const NavItem = ({ to, Icon }) => {
 
 const Sidebar = () => {
   return (
-    <ul className="flex flex-row md:flex-col items-center justify-center bg-[#14213d] p-4 fixed bottom-0 left-1/2 md:fixed md:left-0 md:top-1/2 transform md:-translate-x-0 -translate-x-1/2 md:-translate-y-1/2 w-full md:w-14 h-20 md:h-2/6 rounded-t-3xl md:rounded-r-3xl md:rounded-tl-none z-50 md:z-50">
+    <ul className="flex flex-row md:flex-col items-center justify-center bg-[#14213d] p-4 fixed bottom-0 left-1/2 md:fixed md:left-0 md:top-1/2 transform md:-translate-x-0 -translate-x-1/2 md:-translate-y-1/2 w-full md:w-14 h-20 md:h-[38%] rounded-t-3xl md:rounded-r-3xl md:rounded-tl-none z-50 md:z-50">
       {links.map((link, index) => (
         <NavItem key={index} to={link.to} Icon={link.icon} />
       ))}
